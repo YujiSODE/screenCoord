@@ -6,12 +6,15 @@
 *	This software is released under the MIT License.
 *	See LICENSE or http://opensource.org/licenses/mit-license.php
 *===================================================================
-* A simple tool for estimating length on HTML in CSS pixel
+* A simple tool for estimating length on HTML in CSS pixels
 *=== Synopsis ===
 * `var f=screenCoord(?zIndex?);`
 * this function generates a folding canvas and returns a function that returns text log
-*=== Parameters ===
+*--- Parameters ---
 * - zIndex: an optional integer value for z-index with default value of 1000
+* --- Text log format ---
+* function that generated using `screenCoord(?zIndex?)` returns csv formatted text log as follows:
+*	`x1,y1,x2,y2,length`
 */
 //===================================================================
 /*=== lSum.js (Yuji SODE, 2018):https: //gist.github.com/YujiSODE/ad3ab35235b1648c9f8e08f6a35e8439 ===
