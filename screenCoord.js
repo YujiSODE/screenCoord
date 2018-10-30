@@ -14,7 +14,7 @@
 * - zIndex: an optional integer value for z-index with default value of 1000
 * --- Text log format ---
 * function that generated using `screenCoord(?zIndex?)` returns csv formatted text log as follows:
-*	`x1,y1,x2,y2,length`
+*	`x1,y1,x2,y2,length [px]`
 */
 //===================================================================
 /*=== lSum.js (Yuji SODE, 2018):https: //gist.github.com/YujiSODE/ad3ab35235b1648c9f8e08f6a35e8439 ===
@@ -27,7 +27,7 @@ Math.lSum=function(Arr){var n=Arr.length,i=0,S=0.0,R=0.0,T=0.0;while(i<n){R+=+Ar
 //it generates a folding canvas and returns a function that returns text log
 function screenCoord(zIndex){
 	// - zIndex: an optional integer value for z-index with default value of 1000
-	var slf=window,div,color,sizeB={},moveB,logB,clearB,closeB,details,summary,area,log='x1,y1,x2,y2,length',elemGen,x0=0.0,y0=0.0,i=0;
+	var slf=window,div,color,sizeB={},moveB,logB,clearB,closeB,details,summary,area,log='x1,y1,x2,y2,length [px]',elemGen,x0=0.0,y0=0.0,i=0;
 	zIndex=!(/^[0-9]+$/.test(zIndex))?1000:zIndex;
 		//### element generator ###
 		elemGen=function(element){
@@ -134,7 +134,7 @@ function screenCoord(zIndex){
 			},false);
 			//clear button
 			clearB.addEventListener('click',function(){
-				log='x1,y1,x2,y2,length';
+				log='x1,y1,x2,y2,length [px]';
 				x0=0.0,y0=0.0,i=0;
 			},false);
 			//close button
