@@ -10,7 +10,6 @@
 *=== Synopsis ===
 * `var converter=screenCoord_unitConverter(textLog,value,?unit?);`
 * this function returns a unit converter based on given text log
-*
 *--- Parameters ---
 * - textLog: a csv formatted text log (`x1,y1,x2,y2,length [px]`)
 * - value: a numerical value that corresponds to average length in `textLog`
@@ -18,10 +17,9 @@
 *
 *=== Returned converter and its propertiy ===
 * this converter returns csv formatted text log as follows:
-*	- `converter(log);` returns converted results (`length [px],length [unit]`)
-*	  log is csv formatted text log (`x1,y1,x2,y2,length [px]`)
-*
-*	- `converter.calcLog;` is a log of conversion (`n,average length [px],value [unit],1 [unit/px]`)
+*	- `converter(log);` returns converted results in csv format (`length [px],length [unit]`)
+*	  - log: csv formatted text log (`x1,y1,x2,y2,length [px]`)
+*	- `converter.calcLog;` is a log of conversion in csv format (`n,average length [px],value [unit],1 [unit/px]`)
 */
 //===================================================================
 function screenCoord_unitConverter(textLog,value,unit){
