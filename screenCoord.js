@@ -83,6 +83,7 @@ function screenCoord(zIndex){
 		div.appendChild(closeB);
 			//folding canvas and text log
 			details=elemGen('details');
+			details.open=!0;
 				summary=elemGen('summary');
 				summary.textContent='Available area';
 				summary.style.color='#000f';
