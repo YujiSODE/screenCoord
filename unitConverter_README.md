@@ -7,7 +7,9 @@ GitHub: https://github.com/YujiSODE/screenCoord
 >See LICENSE or http://opensource.org/licenses/mit-license.php
 ______
 ## Synopsis
-`var converter=screenCoord_unitConverter(textLog,value,?unit?);`  
+`var converter=screenCoord_unitConverter(textLog,value,?unit?);`
+
+## Description
 This function returns a unit converter based on given text log.
 
 ### Parameters
