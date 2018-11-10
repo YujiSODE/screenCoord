@@ -35,7 +35,7 @@ Function that generated using `screenCoord(?zIndex?)` returns csv formatted text
 - `screenCoord.js`
 
 ### Additional modules
-- `screenCoord_unitConverter.js`
+- [`screenCoord_unitConverter.js`](unitConverter_README.md)
 
 #### Usage
 `<script src="screenCoord.js"></script>`  
