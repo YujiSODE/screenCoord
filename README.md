@@ -12,5 +12,6 @@ ______
 ### Additional modules
 - `screenCoord_unitConverter.js`
 
-## 2. Synopsis
-``  
+#### Usage
+`<script src="screenCoord.js"></script>`  
+`<script src="`name of additional module`"></script>`
