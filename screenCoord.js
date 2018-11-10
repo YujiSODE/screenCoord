@@ -17,7 +17,7 @@
 *	`x1,y1,x2,y2,length [px]`
 */
 //===================================================================
-/*=== lSum.js (Yuji SODE, 2018):https: //gist.github.com/YujiSODE/ad3ab35235b1648c9f8e08f6a35e8439 ===
+/*=== lSum.js (Yuji SODE, 2018): https://gist.github.com/YujiSODE/ad3ab35235b1648c9f8e08f6a35e8439 ===
 * This is implementation of "lSum.tcl" in JavaScript
 * [References]
 * - Sode, Y. 2018. lSum.tcl; https://gist.github.com/YujiSODE/1f9a4e2729212691972b196a76ba9bd0
