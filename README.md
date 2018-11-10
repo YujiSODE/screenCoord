@@ -40,3 +40,6 @@ Function that generated using `screenCoord(?zIndex?)` returns csv formatted text
 #### Usage
 `<script src="screenCoord.js"></script>`  
 `<script src="`name of additional module`"></script>`
+
+## 3. Library list
+- lSum.js (Yuji SODE, 2018): https://gist.github.com/YujiSODE/ad3ab35235b1648c9f8e08f6a35e8439
