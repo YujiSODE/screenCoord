@@ -6,23 +6,25 @@ GitHub: https://github.com/YujiSODE/screenCoord
 >See LICENSE or http://opensource.org/licenses/mit-license.php
 ______
 ## 1. Synopsis
-`var f=screenCoord(?zIndex?);`  
+`var f=screenCoord(?zIndex?);`
+
 ### Description
-This function generates a folding canvas and returns a function that returns text log.  
-**Parameter**  
+This function generates a folding canvas and returns a function that returns text log.
+
+#### Parameter
 - `zIndex`: an optional integer value for z-index with default value of 1000.
 
-**Text log format**  
+#### Text log format
 Function that generated using `screenCoord(?zIndex?)` returns csv formatted text log as follows:  
 `x1,y1,x2,y2,length [px]`
 
 ## 2. Scripts
-**Main script of screenCoord**
+### Main script of screenCoord
 - `screenCoord.js`
 
-**Additional modules**
+### Additional modules
 - `screenCoord_unitConverter.js`
 
-**Usage**  
+#### Usage
 `<script src="screenCoord.js"></script>`  
 `<script src="`name of additional module`"></script>`
