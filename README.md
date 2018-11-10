@@ -5,6 +5,9 @@ GitHub: https://github.com/YujiSODE/screenCoord
 >This software is released under the MIT License.  
 >See LICENSE or http://opensource.org/licenses/mit-license.php
 ______
+Length on HTML view is estimated using a distance between two clicked points.  
+Clicks on "available area" are detected as above clicked points.
+______
 ## 1. Synopsis
 `var f=screenCoord(?zIndex?);`
 
