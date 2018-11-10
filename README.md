@@ -9,13 +9,13 @@ ______
 **Figure 1. Screenshot of screenCoord.**  
 Length on HTML view is estimated using a distance between two clicked points.  
 Clicks on "available area" are detected as above clicked points.  
-- colored rectangle: it changes color of available area.
+- colored rectangle: it changes color of `available area`.
 - `[-]` and `[+]`: they change size of available area.
 - `[<=>]`: it moves these controls.
 - `[Log]`: it shows the current log of "screenCoord.js".
 - `[Clear]`: it clears the current log of "screenCoord.js".
 - `[X]`: it cloes these controls.
-- `Available area`: it closes/opens available area.
+- `Available area`: it closes/opens `available area`.
 ______
 ## 1. Synopsis
 `var f=screenCoord(?zIndex?);`
