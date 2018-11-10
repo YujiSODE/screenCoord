@@ -6,6 +6,7 @@ GitHub: https://github.com/YujiSODE/screenCoord
 >See LICENSE or http://opensource.org/licenses/mit-license.php
 ______
 ![screenshot of screenCoord.js](https://user-images.githubusercontent.com/19919184/47915340-e3787700-dee5-11e8-8656-26377b5c2a89.png)  
+**Figure 1. Screenshot of screenCoord.**  
 Length on HTML view is estimated using a distance between two clicked points.  
 Clicks on "available area" are detected as above clicked points.
 ______
