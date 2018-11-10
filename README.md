@@ -6,7 +6,11 @@ GitHub: https://github.com/YujiSODE/screenCoord
 >See LICENSE or http://opensource.org/licenses/mit-license.php
 ______
 ## 1. Script
+### Main script of screenCoord
 - `screenCoord.js`
+
+### Additional modules
+- `screenCoord_unitConverter.js`
 
 ## 2. Synopsis
 ``  
