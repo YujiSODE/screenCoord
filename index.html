@@ -1,0 +1,153 @@
+<!--
+/*screenCoord
+*screenCoord_webSample.html
+*===================================================================
+*	Copyright (c) 2018 Yuji SODE <yuji.sode@gmail.com>
+*
+*	This software is released under the MIT License.
+*	See LICENSE or http://opensource.org/licenses/mit-license.php
+*===================================================================
+*/
+-->
+<!-- This program is web sample version of screenCoord. -->
+<!-- A simple tool for estimating length on HTML in CSS pixels. -->
+<!DOCTYPE html><html lang='en'>
+	<head>
+		<meta charset='utf-8'>
+		<meta name='description' content="This program is web sample version of screenCord. A simple tool for estimating length on HTML in CSS pixels.">
+		<title>screenCoord_webSample</title>
+		<style type='text/css'>
+			img{
+				width:300px;
+				height:300px;
+				border:1px solid #000f;
+			}
+			canvas{
+				cursor:crosshair;
+			}
+			button.systemButton{
+				cursor:pointer;
+				color:#ffff;
+				background-color:#00ff;
+			}
+			#control{
+				display:inline-block;
+				width:35vw;
+				height:60vh;
+				overflow:auto;
+				border:1px dashed #000f;
+			}
+			#description01Img{
+				width:20vw;
+				height:20vw;
+			}
+		</style>
+		<script type='application/javascript' src='./touchEvt2mouseEvt.js'></script>
+		<script type='application/javascript' src='./screenCoord.js'></script>
+		<script type='application/javascript' src='./screenCoord_unitConverter.js'></script>
+	</head>
+	<body>
+		<h1>screenCoord_webSample</h1>
+		<p>A simple tool for estimating length on HTML in CSS pixels.
+		<br>This is web sample version of<a href='https://github.com/YujiSODE/screenCoord'>screenCoord</a>.</p>
+		<!-- sample image -->
+		<img src="./sampleImage_unitConverter.png" alt="sample image to measure length">
+		<!-- buttons to control -->
+		<div id='control'>
+			<p>Length on HTML view is estimated using a distance between two clicked points.
+			<br>Clicks on "available area" are detected as above clicked points.</p>
+			<details id='description01' open>
+				<summary>Screenshot and details</summary>
+				<figure>
+					<img id='description01Img' src='./screenCoord_SS20181102.png' alt='screenshot of "screenCoord.js"'>
+					<figcaption>
+					<b>Figure 1. Screenshot of screenCoord.</b>
+					<ul>
+						<li>colored rectangle: it changes color of available area.</li>
+						<li>[-] and [+]: they change size of available area.</li>
+						<li>[<=>]: it moves these controls.</li>
+						<li>[Log]: it shows the current log of "screenCoord.js".</li>
+						<li>[Clear]: it clears the current log of "screenCoord.js".</li>
+						<li>[X]: it cloes these controls.</li>
+						<li>Available area: it closes/opens available area.</li>
+					</ul>
+					</figcaption>
+				</figure>
+			</details>
+			<button id='tryB' type='button' class='systemButton'>Try screenCoord</button>
+			<h2>Converting length value (CSS pixels into mm)</h2>
+			<p><b>Activation of converter</b>
+			<br><b>1.</b> Unit converter must be activated using the current clicked points log.
+			<br>Activated converter can convert length value in the current log into mm.</p>
+			<button id='setConverter_mmB' type='button' class='systemButton'>Activate converter</button>
+			<button id='convertB' type='button' class='systemButton'>Convert</button>
+			<p><b>2.</b> A new clicked log to convert can be created after clearing the current log.</p> 
+		</div>
+		<footer>
+			<p>Copyright (c) 2018 Yuji SODE</p>
+			<a href='https://github.com/YujiSODE/screenCoord'>GitHub</a>
+		</footer>
+		<script type='application/javascript'>
+			(function(){
+				var f,converter,v,slf=window;
+				//### initial value ###
+				f=function(){
+					return 'x1,y1,x2,y2,length [mm]';
+				};
+				converter=function(arg){
+					return 'converter is not active.';
+				};
+				//### Event: activation of screenCoord ###
+				slf.document.getElementById('tryB').addEventListener('click',function(){
+					f=screenCoord();
+				},false);
+				//### Event: activation of converter ###
+				slf.document.getElementById('setConverter_mmB').addEventListener('click',function(){
+					var regTest=function(V){
+						if(/^(?:[0-9]*\.)?[0-9]+$/.test(V)){
+							//activation
+							converter=screenCoord_unitConverter(f(),+V,'mm');
+							slf.alert((converter.calcLog).replace(/[0-9]*\.[0-9]+/g,m=>{return (+m).toFixed(2);}));
+						}else{
+							if(!V){
+								return 'cancelled';
+							}
+							V=slf.prompt('Input true length in mm.\nThis length corresponds to average length in the current log.',200);
+							regTest(V);
+						}
+					};
+					v=slf.prompt('Input true length in mm.\nThis length corresponds to average length in the current log.',200);
+					regTest(v);
+				},false);
+				//### Event: length data conversion [px] to [mm] ###
+				slf.document.getElementById('convertB').addEventListener('click',function(){
+					slf.alert(converter(f()).replace(/[0-9]*\.[0-9]+/g,m=>{return (+m).toFixed(2);}));
+				},false);
+			}());
+		</script>
+	</body>
+</html>
+<!-- screenCoord_webSample.html -->
+<!--/*
+*          MIT License
+*
+* Copyright (c) 2018 Yuji Sode
+*
+* Permission is hereby granted, free of charge, to any person obtaining a copy
+* of this software and associated documentation files (the "Software"), to deal
+* in the Software without restriction, including without limitation the rights
+* to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+* copies of the Software, and to permit persons to whom the Software is
+* furnished to do so, subject to the following conditions:
+
+* The above copyright notice and this permission notice shall be included in all
+* copies or substantial portions of the Software.
+*
+* THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+* IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+* FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+* AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+* LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+* OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+* SOFTWARE.
+*/-->
